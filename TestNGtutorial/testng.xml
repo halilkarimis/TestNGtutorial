@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">										<!--Project Name -->
+
+	<test name="Test">                                      <!--Module Name or test folder -->
+		<classes>
+			<class name="Basics.CreatingSimpleTests" />		<!--Test Name -->
+		</classes>
+	</test>
+
+	<test name="QuestionAnswer">
+		<classes>
+			<class name="Basics.EssentialQuestions">
+				<methods>
+					<exclude name="HowAreYou"></exclude>    <!--Exclude ONLY one test -->
+				</methods>
+			</class>
+			<class name="Basics.EssentialAnswers">
+				<methods>
+					<include name="HowAreYou"></include>     <!--Include ONLY one test -->
+					<include name="Wh.*" />					 <!--Include ALL starts with Wh test -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+</suite> 
